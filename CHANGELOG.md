@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 -   Provide GitOps/sync RBAC cluster role. [#24](https://github.com/atomist/k8s-sdm/issues/24)
 
+### Fixed
+
+-   Fix humio integration. [4579bc6](https://github.com/atomist/k8s-sdm/commit/4579bc6d9b12071afd742ba5c193de8e7097b758)
+
 ## [1.2.1](https://github.com/atomist/k8s-sdm/compare/1.2.0...1.2.1) - 2019-06-04
 
 ### Fixed
