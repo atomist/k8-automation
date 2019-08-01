@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 -   Provide GitOps/sync RBAC cluster role. [#24](https://github.com/atomist/k8s-sdm/issues/24)
 
+### Changed
+
+-   Make YAML the default spec format. [f06d43e](https://github.com/atomist/k8s-sdm/commit/f06d43e52a2b645ab24da734841d809a32c52b8f)
+
 ### Fixed
 
 -   Fix humio integration. [4579bc6](https://github.com/atomist/k8s-sdm/commit/4579bc6d9b12071afd742ba5c193de8e7097b758)
