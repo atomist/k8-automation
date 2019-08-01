@@ -23,7 +23,7 @@ This page details all runtime OSS dependencies of `@atomist/k8s-sdm`.
 |[GPL-3.0](#gpl-30)|3|
 |[ISC](#isc)|75|
 |[MIT AND BSD-3-Clause](#mit-and-bsd-3-clause)|1|
-|[MIT](#mit)|824|
+|[MIT](#mit)|825|
 |[Public Domain](#public-domain)|1|
 |[UNKNOWN](#unknown)|1|
 |[Unlicense](#unlicense)|1|
@@ -40,12 +40,12 @@ Apache License 2.0 - [http://www.apache.org/licenses/LICENSE-2.0](http://www.apa
 
 | Name | Version | Publisher | Repository |
 |------|---------|-----------|------------|
-|`@atomist/automation-client-ext-humio`|`1.0.3-master.20190319172045`|Atomist|[https://github.com/atomist/automation-client-ext-humio](https://github.com/atomist/automation-client-ext-humio)|
+|`@atomist/automation-client-ext-humio`|`0.2.0`|Atomist|[https://github.com/atomist/automation-client-ext-humio](https://github.com/atomist/automation-client-ext-humio)|
 |`@atomist/automation-client-ext-logzio`|`1.0.2`|Atomist|[https://github.com/atomist/automation-client-ext-logzio](https://github.com/atomist/automation-client-ext-logzio)|
 |`@atomist/sdm-core`|`1.6.1`|Atomist|[https://github.com/atomist/sdm-core](https://github.com/atomist/sdm-core)|
 |`@atomist/sdm-pack-build`|`1.0.4`|Atomist|[https://github.com/atomist/sdm-pack-build](https://github.com/atomist/sdm-pack-build)|
 |`@atomist/sdm-pack-docker`|`1.1.0`|Atomist|[https://github.com/atomist/sdm-pack-docker](https://github.com/atomist/sdm-pack-docker)|
-|`@atomist/sdm-pack-k8s`|`1.6.0`|Atomist|[https://github.com/atomist/sdm-pack-k8s](https://github.com/atomist/sdm-pack-k8s)|
+|`@atomist/sdm-pack-k8s`|`1.7.0`|Atomist|[https://github.com/atomist/sdm-pack-k8s](https://github.com/atomist/sdm-pack-k8s)|
 |`@atomist/sdm-pack-node`|`1.0.3`|Atomist|[https://github.com/atomist/sdm-pack-node](https://github.com/atomist/sdm-pack-node)|
 |`@atomist/sdm`|`1.6.1`|Atomist|[https://github.com/atomist/sdm](https://github.com/atomist/sdm)|
 |`@atomist/slack-messages`|`1.1.1`|Atomist|[https://github.com/atomist/slack-messages](https://github.com/atomist/slack-messages)|
@@ -316,7 +316,6 @@ MIT License - [http://www.opensource.org/licenses/MIT](http://www.opensource.org
 |`@types/inquirer`|`0.0.43`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/is-glob`|`4.0.0`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/isomorphic-fetch`|`0.0.35`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
-|`@types/js-yaml`|`3.12.0`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/js-yaml`|`3.12.1`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/json-stable-stringify`|`1.0.32`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/json-stringify-safe`|`5.0.0`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
@@ -357,6 +356,7 @@ MIT License - [http://www.opensource.org/licenses/MIT](http://www.opensource.org
 |`@types/rx`|`4.1.1`|Carl de Billy|[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/semver`|`6.0.1`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/serialize-error`|`2.1.0`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
+|`@types/serialize-error`|`4.0.1`||[https://github.com/sindresorhus/serialize-error](https://github.com/sindresorhus/serialize-error)|
 |`@types/serve-static`|`1.13.2`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/shelljs`|`0.8.5`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/sprintf-js`|`1.1.2`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
@@ -958,6 +958,7 @@ MIT License - [http://www.opensource.org/licenses/MIT](http://www.opensource.org
 |`send`|`0.17.1`|TJ Holowaychuk|[https://github.com/pillarjs/send](https://github.com/pillarjs/send)|
 |`sentence-case`|`2.1.1`|Blake Embrey|[https://github.com/blakeembrey/sentence-case](https://github.com/blakeembrey/sentence-case)|
 |`serialize-error`|`3.0.0`|Sindre Sorhus|[https://github.com/sindresorhus/serialize-error](https://github.com/sindresorhus/serialize-error)|
+|`serialize-error`|`4.1.0`|Sindre Sorhus|[https://github.com/sindresorhus/serialize-error](https://github.com/sindresorhus/serialize-error)|
 |`serve-static`|`1.14.1`|Douglas Christopher Wilson|[https://github.com/expressjs/serve-static](https://github.com/expressjs/serve-static)|
 |`set-value`|`2.0.1`|Jon Schlinkert|[https://github.com/jonschlinkert/set-value](https://github.com/jonschlinkert/set-value)|
 |`sha-regex`|`1.0.7`|Nikolaos Kamarinakis|[https://github.com/k4m4/sha-regex](https://github.com/k4m4/sha-regex)|
