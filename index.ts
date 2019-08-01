@@ -15,6 +15,7 @@
  */
 
 import { Configuration } from "@atomist/automation-client";
+import { configureHumio } from "@atomist/automation-client-ext-humio";
 import { configureLogzio } from "@atomist/automation-client-ext-logzio";
 import {
     ConfigureOptions,
@@ -32,6 +33,7 @@ const machineOptions: ConfigureOptions = {
 export const configuration: Configuration = {
     postProcessors: [
         checkConfiguration,
+        configureHumio,
         configureLogzio,
         configureSdm(machine, machineOptions),
     ],
