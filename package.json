@@ -32,7 +32,7 @@
     "@atomist/sdm-core": "^1.6.1",
     "@atomist/sdm-pack-build": "^1.0.4",
     "@atomist/sdm-pack-docker": "^1.1.0",
-    "@atomist/sdm-pack-k8s": "1.7.1-sync-race-66.20190802180858",
+    "@atomist/sdm-pack-k8s": "^1.7.1",
     "@atomist/sdm-pack-node": "^1.0.3",
     "@atomist/slack-messages": "^1.1.1",
     "@kubernetes/client-node": "^0.10.2",
@@ -45,7 +45,7 @@
     "ts-essentials": "^2.0.3"
   },
   "devDependencies": {
-    "@atomist/sdm-local": "^1.0.10",
+    "@atomist/sdm-local": "^1.1.0",
     "@types/mocha": "^5.2.7",
     "@types/power-assert": "^1.5.0",
     "espower-typescript": "^9.0.2",
