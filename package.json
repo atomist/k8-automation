@@ -1,6 +1,6 @@
 {
   "name": "@atomist/k8s-sdm",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "description": "Atomist SDM for deploying, updating, and removing Kubernetes applications",
   "author": {
     "name": "Atomist",
@@ -32,7 +32,7 @@
     "@atomist/sdm-core": "^1.6.1",
     "@atomist/sdm-pack-build": "^1.0.4",
     "@atomist/sdm-pack-docker": "^1.1.0",
-    "@atomist/sdm-pack-k8s": "^1.7.1",
+    "@atomist/sdm-pack-k8s": "^1.8.0",
     "@atomist/sdm-pack-node": "^1.0.3",
     "@atomist/slack-messages": "^1.1.1",
     "@kubernetes/client-node": "^0.10.2",
