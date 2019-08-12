@@ -117,10 +117,10 @@ spec:
           resources:
             limits:
               cpu: 500m
-              memory: 512Mi
+              memory: 768Mi
             requests:
               cpu: 100m
-              memory: 320Mi
+              memory: 512Mi
           securityContext:
             allowPrivilegeEscalation: false
             privileged: false
