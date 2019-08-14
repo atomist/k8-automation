@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased](https://github.com/atomist/k8s-sdm/compare/1.4.0...HEAD)
 
+### Changed
+
+-   Run sync in worker. [84f01d3](https://github.com/atomist/k8s-sdm/commit/84f01d30af7bc40422ed981b68b5ebcdd27c8399)
+
 ## [1.4.0](https://github.com/atomist/k8s-sdm/compare/1.3.0...1.4.0) - 2019-08-09
 
 ### Changed
