@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 -   Run sync in worker. [84f01d3](https://github.com/atomist/k8s-sdm/commit/84f01d30af7bc40422ed981b68b5ebcdd27c8399)
+-   Update Docker base image to sdm-base 0.3.0. [323672c](https://github.com/atomist/k8s-sdm/commit/323672ce426e5692544b62e86c2c4bbb6549dc18)
 
 ## [1.4.0](https://github.com/atomist/k8s-sdm/compare/1.3.0...1.4.0) - 2019-08-09
 
