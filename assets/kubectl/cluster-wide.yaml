@@ -95,7 +95,7 @@ spec:
               value: /opt/atm/client.config.json
             - name: TMPDIR
               value: /tmp
-          image: atomist/k8s-sdm:1.4.0
+          image: atomist/k8s-sdm:1.5.0
           livenessProbe:
             failureThreshold: 3
             httpGet:
