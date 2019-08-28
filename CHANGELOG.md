@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased](https://github.com/atomist/k8s-sdm/compare/1.5.0...HEAD)
 
+### Changed
+
+-   Support multi-document YAML specs. [3f0085c](https://github.com/atomist/k8s-sdm/commit/3f0085cd32a7ab50de9fe077e1eb6bd59a054786)
+
 ## [1.5.0](https://github.com/atomist/k8s-sdm/compare/1.4.0...1.5.0) - 2019-08-15
 
 ### Changed
