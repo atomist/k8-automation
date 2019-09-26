@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 -   Support multi-document YAML specs. [3f0085c](https://github.com/atomist/k8s-sdm/commit/3f0085cd32a7ab50de9fe077e1eb6bd59a054786)
 
+### Fixed
+
+-   Fix interval sync when commands not added. [f3e3ac9](https://github.com/atomist/k8s-sdm/commit/f3e3ac9676381a9cc3fca809baf5f4ad30a2f111)
+
 ## [1.5.0](https://github.com/atomist/k8s-sdm/compare/1.4.0...1.5.0) - 2019-08-15
 
 ### Changed
