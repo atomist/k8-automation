@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased](https://github.com/atomist/k8s-sdm/compare/1.6.0...HEAD)
 
+### Fixed
+
+-   Update sdm-pack-k8s to remove error when sync repo not set and improve error & log messages. [8296445](https://github.com/atomist/k8s-sdm/commit/82964457944083d21b70e1c08567cdfb260b7728)
+
 ## [1.6.0](https://github.com/atomist/k8s-sdm/compare/1.5.0...1.6.0) - 2019-09-26
 
 ### Changed
