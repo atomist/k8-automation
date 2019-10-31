@@ -19,6 +19,9 @@ metadata:
   name: k8s-sdm
 rules:
   - apiGroups: [""]
+    resources: ["namespaces"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: [""]
     resources: ["pods", "secrets", "serviceaccounts", "services"]
     verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
   - apiGroups: ["apps", "extensions"]
