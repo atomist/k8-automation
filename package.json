@@ -32,7 +32,7 @@
     "@atomist/sdm-core": "^1.7.0",
     "@atomist/sdm-pack-build": "^1.0.6-master.20190903202948",
     "@atomist/sdm-pack-docker": "^1.1.0",
-    "@atomist/sdm-pack-k8s": "^1.11.0-master.20191118162040",
+    "@atomist/sdm-pack-k8s": "^1.11.0-master.20191119142727",
     "@atomist/sdm-pack-node": "^1.0.3",
     "@atomist/slack-messages": "^1.1.1",
     "@kubernetes/client-node": "^0.10.2",
