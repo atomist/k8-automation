@@ -36,3 +36,7 @@ configuration:
       enabled: true
     goal:
       timeout: 1200000
+---
+goals:
+  - use: containerDeploy
+  - use: kubernetesDeploy
