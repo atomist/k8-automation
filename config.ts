@@ -27,7 +27,7 @@ export const K8sSupport = async (cfg: Configuration) => {
     if (runningInK8s()) {
         const defaultCfg = {
             cluster: {
-                workers: 2,
+                workers: 1,
             },
             sdm: {
                 k8s: {
