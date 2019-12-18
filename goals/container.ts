@@ -18,6 +18,8 @@ import {
     ExecuteGoal,
     GoalScheduler,
     GoalWithFulfillment,
+    SdmGoalState,
+    ServiceRegistrationGoalDataKey,
 } from "@atomist/sdm";
 import {
     Container,
@@ -74,6 +76,8 @@ const scheduleK8sJob: ExecuteGoal = async gi => {
     if (!containerReg) {
         throw new Error(`Goal ${goalEvent.uniqueName} event data has no container spec: ${goalEvent.data}`);
     }
+    // the k8sFulfillmentCallback may already have been called, so wipe it out
+    delete goalEventData[ServiceRegistrationGoalDataKey];
 
     containerReg.input = containerReg.input || [];
     containerReg.output = containerReg.output || [];
@@ -92,9 +96,14 @@ const scheduleK8sJob: ExecuteGoal = async gi => {
 
     try {
         const schedulableGoalEvent = await k8sFulfillmentCallback(gi.goal as Container, containerReg)(goalEvent, gi);
-        return k8sScheduler.schedule({ ...gi, goalEvent: schedulableGoalEvent });
+        const scheduleResult = await k8sScheduler.schedule({ ...gi, goalEvent: schedulableGoalEvent });
+        if (scheduleResult.code) {
+            return { ...scheduleResult, message: `Failed to schedule container goal ${goalEvent.uniqueName}: ${scheduleResult.message}` };
+        }
+        schedulableGoalEvent.state = SdmGoalState.in_process;
+        return schedulableGoalEvent;
     } catch (e) {
-        const message = `Failed to schedule container goal as Kubernetes job: ${e.message}`;
+        const message = `Failed to schedule container goal ${goalEvent.uniqueName} as Kubernetes job: ${e.message}`;
         gi.progressLog.write(message);
         return { code: 1, message };
     }
