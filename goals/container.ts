@@ -26,6 +26,7 @@ import {
     KubernetesGoalScheduler,
 } from "@atomist/sdm-core";
 import {
+    executeK8sJob,
     k8sFulfillmentCallback,
 } from "@atomist/sdm-core/lib/goal/container/k8s";
 import * as stringify from "json-stringify-safe";
@@ -46,12 +47,19 @@ export const containerDeploy: GoalMaker = async sdm => {
 };
 
 /**
+ * If running as isolated goal, use [[executeK8sJob]] to execute the
+ * goal.  Otherwise, schedule the goal execution as a Kubernetes job
+ * using [[scheduleK8sjob]].
+ */
+const containerExecutor: ExecuteGoal = gi => (process.env.ATOMIST_ISOLATED_GOAL) ? executeK8sJob()(gi) : scheduleK8sJob(gi);
+
+/**
  * Get container registration from goal event data, use
  * [[k8sFulfillmentcallback]] to get a goal event schedulable by a
  * [[KubernetesGoalScheduler]], then schedule the goal using that
  * scheduler.
  */
-const containerExecutor: ExecuteGoal = async gi => {
+const scheduleK8sJob: ExecuteGoal = async gi => {
     const { goalEvent } = gi;
     if (!goalEvent || !goalEvent.data) {
         throw new Error(`Goal ${goalEvent.uniqueName} requesting fulfillment has no data element`);
