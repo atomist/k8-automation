@@ -76,8 +76,6 @@ const scheduleK8sJob: ExecuteGoal = async gi => {
     if (!containerReg) {
         throw new Error(`Goal ${goalEvent.uniqueName} event data has no container spec: ${goalEvent.data}`);
     }
-    // the k8sFulfillmentCallback may already have been called, so wipe it out
-    delete goalEventData[ServiceRegistrationGoalDataKey];
 
     containerReg.input = containerReg.input || [];
     containerReg.output = containerReg.output || [];
@@ -93,6 +91,10 @@ const scheduleK8sJob: ExecuteGoal = async gi => {
     if (!k8sScheduler) {
         throw new Error(`Failed to find KubernetesGoalScheduler in goal schedulers: ${stringify(goalSchedulers)}`);
     }
+
+    // the k8sFulfillmentCallback may already have been called, so wipe it out
+    delete goalEventData[ServiceRegistrationGoalDataKey];
+    goalEvent.data = JSON.stringify(goalEventData);
 
     try {
         const schedulableGoalEvent = await k8sFulfillmentCallback(gi.goal as Container, containerReg)(goalEvent, gi);
