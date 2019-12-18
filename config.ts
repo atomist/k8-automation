@@ -25,6 +25,7 @@ import * as _ from "lodash";
 
 export const K8sSupport = async (cfg: Configuration) => {
     if (runningInK8s()) {
+        process.env.ATOMIST_GOAL_SCHEDULER = "kubernetes";
         const defaultCfg = {
             cluster: {
                 workers: 1,
