@@ -28,6 +28,7 @@ import {
 import {
     k8sFulfillmentCallback,
 } from "@atomist/sdm-core/lib/goal/container/k8s";
+import * as stringify from "json-stringify-safe";
 import * as _ from "lodash";
 
 /**
@@ -78,7 +79,7 @@ const containerExecutor: ExecuteGoal = async gi => {
     const goalSchedulers: GoalScheduler[] = toArray(gi.configuration.sdm.goalScheduler);
     const k8sScheduler = goalSchedulers.find(gs => gs instanceof KubernetesGoalScheduler) as KubernetesGoalScheduler;
     if (!k8sScheduler) {
-        throw new Error("Failed to find KubernetesGoalScheduler in goal schedulers");
+        throw new Error(`Failed to find KubernetesGoalScheduler in goal schedulers: ${stringify(goalSchedulers)}`);
     }
 
     try {

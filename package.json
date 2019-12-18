@@ -33,7 +33,9 @@
     "@atomist/sdm-pack-gcp": "0.1.0-master.20191208110459",
     "@atomist/sdm-pack-k8s": "^2.0.0-k8s-scheduler.20191218132958",
     "@atomist/slack-messages": "^1.1.1",
+    "@types/json-stringify-safe": "^5.0.0",
     "@types/lodash": "^4.14.136",
+    "json-stringify-safe": "^5.0.1",
     "lodash": "^4.17.15"
   },
   "devDependencies": {
