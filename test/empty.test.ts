@@ -14,6 +14,10 @@
  * limitations under the License.
  */
 
-import { configureYaml } from "@atomist/sdm-core";
+import * as assert from "power-assert";
 
-export const configuration = configureYaml("atomist.yaml");
+describe("empty", () => {
+    it("is true", () => {
+        assert(true);
+    });
+});

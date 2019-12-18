@@ -1,0 +1,104 @@
+/*
+ * Copyright © 2019 Atomist, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+import {
+    ExecuteGoal,
+    GoalScheduler,
+    GoalWithFulfillment,
+} from "@atomist/sdm";
+import {
+    Container,
+    GoalMaker,
+    K8sContainerRegistration,
+    KubernetesGoalScheduler,
+} from "@atomist/sdm-core";
+import {
+    k8sFulfillmentCallback,
+} from "@atomist/sdm-core/lib/goal/container/k8s";
+import * as _ from "lodash";
+
+/**
+ * Create goal that can fulfill container goals.  It will fulfill
+ * those container goals by constructing a job spec from the container
+ * goal data and submitting that spec to the Kubernetes API.
+ */
+export const containerDeploy: GoalMaker = async sdm => {
+    const goalName = "container-deploy";
+    return new GoalWithFulfillment({ displayName: goalName, uniqueName: goalName })
+        .with({
+            goalExecutor: containerExecutor,
+            name: `${goalName}-executor`,
+        });
+};
+
+/**
+ * Get container registration from goal event data, use
+ * [[k8sFulfillmentcallback]] to get a goal event schedulable by a
+ * [[KubernetesGoalScheduler]], then schedule the goal using that
+ * scheduler.
+ */
+const containerExecutor: ExecuteGoal = async gi => {
+    const { goalEvent } = gi;
+    if (!goalEvent || !goalEvent.data) {
+        throw new Error(`Goal ${goalEvent.uniqueName} requesting fulfillment has no data element`);
+    }
+    let goalEventData: any;
+    try {
+        goalEventData = JSON.parse(goalEvent.data);
+    } catch (e) {
+        throw new Error(`Failed to parse goal ${goalEvent.uniqueName} event data: ${goalEvent.data}`);
+    }
+    const containerReg: K8sContainerRegistration = goalEventData["@atomist/sdm/container"];
+    if (!containerReg) {
+        throw new Error(`Goal ${goalEvent.uniqueName} event data has no container spec: ${goalEvent.data}`);
+    }
+
+    containerReg.input = containerReg.input || [];
+    containerReg.output = containerReg.output || [];
+    if (goalEventData["@atomist/sdm/input"]) {
+        containerReg.input.push(...goalEventData["@atomist/sdm/input"]);
+    }
+    if (goalEventData["@atomist/sdm/output"]) {
+        containerReg.output.push(...goalEventData["@atomist/sdm/output"]);
+    }
+
+    const goalSchedulers: GoalScheduler[] = toArray(gi.configuration.sdm.goalScheduler);
+    const k8sScheduler = goalSchedulers.find(gs => gs instanceof KubernetesGoalScheduler) as KubernetesGoalScheduler;
+    if (!k8sScheduler) {
+        throw new Error("Failed to find KubernetesGoalScheduler in goal schedulers");
+    }
+
+    try {
+        const schedulableGoalEvent = await k8sFulfillmentCallback(gi.goal as Container, containerReg)(goalEvent, gi);
+        return k8sScheduler.schedule({ ...gi, goalEvent: schedulableGoalEvent });
+    } catch (e) {
+        const message = `Failed to schedule container goal as Kubernetes job: ${e.message}`;
+        gi.progressLog.write(message);
+        return { code: 1, message };
+    }
+};
+
+function toArray<T>(a: T | T[] | undefined): T[] {
+    if (a) {
+        if (Array.isArray(a)) {
+            return a;
+        } else {
+            return [a];
+        }
+    } else {
+        return [];
+    }
+}
