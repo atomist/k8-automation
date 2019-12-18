@@ -14,30 +14,6 @@
  * limitations under the License.
  */
 
-import { Configuration } from "@atomist/automation-client";
-import { configureHumio } from "@atomist/automation-client-ext-humio";
-import { configureLogzio } from "@atomist/automation-client-ext-logzio";
-import {
-    ConfigureOptions,
-    configureSdm,
-} from "@atomist/sdm-core";
-import { checkConfiguration } from "./lib/machine/config";
-import { machine } from "./lib/machine/machine";
+import { configureYaml } from "@atomist/sdm-core";
 
-const machineOptions: ConfigureOptions = {
-    requiredConfigurationValues: [
-        "environment",
-    ],
-};
-
-export const configuration: Configuration = {
-    postProcessors: [
-        checkConfiguration,
-        configureHumio,
-        configureLogzio,
-        configureSdm(machine, machineOptions),
-    ],
-    cluster: {
-        workers: 2,
-    },
-};
+export const configuration = configureYaml("atomist.yaml");

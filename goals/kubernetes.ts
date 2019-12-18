@@ -14,17 +14,7 @@
  * limitations under the License.
  */
 
-import * as assert from "power-assert";
-import {
-    machine,
-} from "../../lib/machine/machine";
+import { GoalMaker } from "@atomist/sdm-core";
+import { kubernetesDeployExecutor } from "@atomist/sdm-pack-k8s";
 
-describe("machine", () => {
-
-    it("should create a k8 SDM", () => {
-        const sdm = machine({ name: "k8s-sdm-test" } as any);
-        assert(sdm);
-        assert(sdm.extensionPacks.some(p => p.name === "@atomist/sdm-pack-k8s"));
-    });
-
-});
+export const kubernetesDeploy: GoalMaker = async () => kubernetesDeployExecutor();
