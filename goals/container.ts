@@ -86,6 +86,11 @@ const scheduleK8sJob: ExecuteGoal = async gi => {
     if (goalEventData["@atomist/sdm/output"]) {
         containerReg.output.push(...goalEventData["@atomist/sdm/output"]);
     }
+    if (containerReg.initContainers && containerReg.initContainers.length > 0) {
+        containerReg.initContainers = containerReg.initContainers.filter(c => {
+            return !(c.env && c.env.some(e => e.name === "ATOMIST_ISOLATED_GOAL_INIT"));
+        });
+    }
 
     const goalSchedulers: GoalScheduler[] = toArray(gi.configuration.sdm.goalScheduler);
     const k8sScheduler = goalSchedulers.find(gs => gs instanceof KubernetesGoalScheduler) as KubernetesGoalScheduler;
