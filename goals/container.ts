@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+import { logger } from "@atomist/automation-client";
 import {
     ExecuteGoal,
     GoalScheduler,
@@ -97,12 +98,14 @@ const scheduleK8sJob: ExecuteGoal = async gi => {
     goalEvent.data = JSON.stringify(goalEventData);
 
     try {
+        logger.debug(`BEFORE:${goalEvent.data}`);
         const schedulableGoalEvent = await k8sFulfillmentCallback(gi.goal as Container, containerReg)(goalEvent, gi);
         const scheduleResult = await k8sScheduler.schedule({ ...gi, goalEvent: schedulableGoalEvent });
         if (scheduleResult.code) {
             return { ...scheduleResult, message: `Failed to schedule container goal ${goalEvent.uniqueName}: ${scheduleResult.message}` };
         }
         schedulableGoalEvent.state = SdmGoalState.in_process;
+        logger.debug(`AFTER:${schedulableGoalEvent.data}`);
         return schedulableGoalEvent;
     } catch (e) {
         const message = `Failed to schedule container goal ${goalEvent.uniqueName} as Kubernetes job: ${e.message}`;
