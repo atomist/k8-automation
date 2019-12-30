@@ -38,5 +38,5 @@ configuration:
       timeout: 1200000
 ---
 goals:
-  - use: containerDeploy
-  - use: kubernetesDeploy
+  - use: containerFulfill
+  - use: kubernetesDeployFulfill

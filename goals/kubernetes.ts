@@ -15,6 +15,6 @@
  */
 
 import { GoalMaker } from "@atomist/sdm-core";
-import { kubernetesDeployExecutor } from "@atomist/sdm-pack-k8s";
+import { kubernetesDeployFulfiller } from "@atomist/sdm-pack-k8s";
 
-export const kubernetesDeploy: GoalMaker = async () => kubernetesDeployExecutor();
+export const kubernetesDeployFulfill: GoalMaker = async () => kubernetesDeployFulfiller();
