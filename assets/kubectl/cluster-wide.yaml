@@ -93,34 +93,26 @@ spec:
         - env:
             - name: ATOMIST_CONFIG_PATH
               value: /opt/atm/client.config.json
+            - name: HOME
+              value: /home/atomist
             - name: TMPDIR
               value: /tmp
           image: atomist/k8s-sdm:1.5.0
           livenessProbe:
-            failureThreshold: 3
             httpGet:
               path: /health
               port: http
-              scheme: HTTP
             initialDelaySeconds: 20
-            periodSeconds: 20
-            successThreshold: 1
-            timeoutSeconds: 3
           name: k8s-sdm
           ports:
             - name: http
               containerPort: 2866
               protocol: TCP
           readinessProbe:
-            failureThreshold: 3
             httpGet:
               path: /health
               port: http
-              scheme: HTTP
             initialDelaySeconds: 20
-            periodSeconds: 20
-            successThreshold: 1
-            timeoutSeconds: 3
           resources:
             limits:
               cpu: 500m
@@ -132,34 +124,38 @@ spec:
             allowPrivilegeEscalation: false
             privileged: false
             readOnlyRootFilesystem: true
+            runAsGroup: 2866,
+            runAsNonRoot: true,
+            runAsUser: 2866
           volumeMounts:
             - mountPath: /opt/atm
               name: k8s-sdm
               readOnly: true
             - mountPath: /home/atomist
-              name: home
+              name: atomist-home
             - mountPath: /tmp
-              name: tmp
+              name: sdm-tmp
       initContainers:
         - args:
             - git config --global user.email 'bot@atomist.com' && git config --global user.name 'Atomist Bot'
           command: ["/bin/sh", "-c"]
-          image: atomist/sdm-base:0.3.0
-          name: "home"
+          env:
+            - name: HOME
+              value: /home/atomist
+          image: atomist/sdm-base:0.4.0
+          name: atomist-home-git
           securityContext:
             allowPrivilegeEscalation: false
             privileged: false
             readOnlyRootFilesystem: true
+            runAsGroup: 2866,
+            runAsNonRoot: true,
+            runAsUser: 2866
           volumeMounts:
             - mountPath: /home/atomist
-              name: home
+              name: atomist-home
       securityContext:
         fsGroup: 2866
-        runAsGroup: 2866
-        runAsNonRoot: true
-        runAsUser: 2866
-        supplementalGroups: []
-        sysctls: []
       serviceAccountName: k8s-sdm
       volumes:
         - name: k8s-sdm
@@ -167,6 +163,6 @@ spec:
             defaultMode: 288
             secretName: k8s-sdm
         - emptyDir: {}
-          name: home
+          name: atomist-home
         - emptyDir: {}
-          name: tmp
+          name: sdm-tmp

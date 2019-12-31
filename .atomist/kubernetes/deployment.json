@@ -10,6 +10,10 @@
                 "value": "/opt/atm/client.config.json"
               },
               {
+                "name": "HOME",
+                "value": "/home/atomist"
+              },
+              {
                 "name": "TMPDIR",
                 "value": "/tmp"
               }
@@ -18,15 +22,13 @@
               "httpGet": {
                 "path": "/health"
               },
-              "initialDelaySeconds": 20,
-              "periodSeconds": 20
+              "initialDelaySeconds": 20
             },
             "readinessProbe": {
               "httpGet": {
                 "path": "/health"
               },
-              "initialDelaySeconds": 20,
-              "periodSeconds": 20
+              "initialDelaySeconds": 20
             },
             "resources": {
               "limits": {
@@ -41,7 +43,10 @@
             "securityContext": {
               "allowPrivilegeEscalation": false,
               "privileged": false,
-              "readOnlyRootFilesystem": true
+              "readOnlyRootFilesystem": true,
+              "runAsGroup": 2866,
+              "runAsNonRoot": true,
+              "runAsUser": 2866
             },
             "volumeMounts": [
               {
@@ -51,11 +56,11 @@
               },
               {
                 "mountPath": "/home/atomist",
-                "name": "home"
+                "name": "atomist-home"
               },
               {
                 "mountPath": "/tmp",
-                "name": "tmp"
+                "name": "sdm-tmp"
               }
             ]
           }
@@ -66,28 +71,32 @@
               "git config --global user.email 'bot@atomist.com' && git config --global user.name 'Atomist Bot'"
             ],
             "command": ["/bin/sh", "-c"],
-            "image": "atomist/sdm-base:0.3.0",
-            "name": "home",
+            "env": [
+              {
+                "name": "HOME",
+                "value": "/home/atomist"
+              }
+            ],
+            "image": "atomist/sdm-base:0.4.0",
+            "name": "atomist-home-git",
             "securityContext": {
               "allowPrivilegeEscalation": false,
               "privileged": false,
-              "readOnlyRootFilesystem": true
+              "readOnlyRootFilesystem": true,
+              "runAsGroup": 2866,
+              "runAsNonRoot": true,
+              "runAsUser": 2866
             },
             "volumeMounts": [
               {
                 "mountPath": "/home/atomist",
-                "name": "home"
+                "name": "atomist-home"
               }
             ]
           }
         ],
         "securityContext": {
-          "fsGroup": 2866,
-          "runAsGroup": 2866,
-          "runAsNonRoot": true,
-          "runAsUser": 2866,
-          "supplementalGroups": [],
-          "sysctls": []
+          "fsGroup": 2866
         },
         "volumes": [
           {
@@ -99,11 +108,11 @@
           },
           {
             "emptyDir": {},
-            "name": "home"
+            "name": "atomist-home"
           },
           {
             "emptyDir": {},
-            "name": "tmp"
+            "name": "sdm-tmp"
           }
         ]
       }
