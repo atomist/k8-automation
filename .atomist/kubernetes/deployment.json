@@ -102,7 +102,7 @@
           {
             "name": "k8s-sdm",
             "secret": {
-              "defaultMode": 288,
+              "defaultMode": 292,
               "secretName": "k8s-sdm"
             }
           },
