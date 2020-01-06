@@ -1,7 +1,7 @@
 {
   "name": "@atomist/k8s-sdm",
   "version": "2.0.0",
-  "description": "Atomist SDM for deploying, updating, and removing Kubernetes applications",
+  "description": "Atomist SDM for scheduling and deploying to Kubernetes",
   "author": {
     "name": "Atomist",
     "email": "support@atomist.com",
@@ -26,20 +26,14 @@
   "types": "./index.d.ts",
   "dependencies": {
     "@atomist/automation-client": "^2.0.0-master.20191226145834",
-    "@atomist/automation-client-ext-humio": "^0.2.0",
-    "@atomist/automation-client-ext-logzio": "^1.0.2",
     "@atomist/sdm": "^2.0.0-master.20191226140700",
     "@atomist/sdm-core": "^2.0.0-master.20191221184944",
     "@atomist/sdm-pack-gcp": "0.1.0-master.20191208110459",
     "@atomist/sdm-pack-k8s": "^2.0.0-master.20191223232125",
-    "@atomist/slack-messages": "^1.1.1",
-    "@types/json-stringify-safe": "^5.0.0",
     "@types/lodash": "^4.14.136",
-    "json-stringify-safe": "^5.0.1",
     "lodash": "^4.17.15"
   },
   "devDependencies": {
-    "@atomist/sdm-local": "^1.2.1",
     "@types/mocha": "^5.2.7",
     "@types/power-assert": "^1.5.0",
     "espower-typescript": "^9.0.2",
@@ -68,15 +62,14 @@
     "clean:test": "rimraf .nyc_output coverage",
     "compile": "run-s git:info gql:gen compile:ts",
     "compile:ts": "tsc --project .",
-    "doc": "typedoc --mode modules --excludeExternals --ignoreCompilerErrors --exclude \"**/*.d.ts\" --out doc *.ts goals/*.ts",
+    "doc": "typedoc --mode modules --excludeExternals --ignoreCompilerErrors --exclude \"**/*.d.ts\" --out doc *.ts lib",
     "git:info": "atm-git-info",
     "gql:gen": "atm-gql-gen",
     "lint": "tslint --config tslint.json --format verbose --project .",
     "lint:fix": "npm run lint -- --fix",
     "start": "atm-start",
     "test": "mocha --require espower-typescript/guess \"test/**/*.test.ts\"",
-    "test:one": "mocha --require espower-typescript/guess \"test/**/${TEST:-*.test.ts}\"",
-    "typedoc": "npm run doc"
+    "test:one": "mocha --require espower-typescript/guess \"test/**/${TEST:-*.test.ts}\""
   },
   "engines": {
     "node": ">=8.2.0",
