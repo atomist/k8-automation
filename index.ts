@@ -34,6 +34,11 @@ import { safeBucketName } from "./lib/bucket";
 export const configuration = configure(async sdm => {
     if (runningInK8s()) {
         process.env.ATOMIST_GOAL_SCHEDULER = "kubernetes";
+        sdm.addExtensionPacks(
+            gcpSupport(),
+            k8sGoalSchedulingSupport(),
+            k8sSupport({ registerCluster: true }),
+        );
         const defaultCfg = {
             cluster: {
                 workers: 1,
@@ -56,11 +61,6 @@ export const configuration = configure(async sdm => {
                     enabled: true,
                     path: "k8s-sdm-cache",
                 },
-                extensionPacks: [
-                    gcpSupport(),
-                    k8sGoalSchedulingSupport(),
-                    k8sSupport({ registerCluster: true }),
-                ],
             },
         };
         _.defaultsDeep(sdm.configuration, defaultCfg);
