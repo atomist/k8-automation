@@ -50,6 +50,13 @@ describe("bucket", () => {
             assert(b === e);
         });
 
+        it("should safely truncate a long name", () => {
+            const n = "some-very-long-bucket-name-that-is-too-long-to-be-an-actual-bu-cket-name-for-gcs";
+            const b = safeBucketName(n);
+            const e = "some-very-long-bucket-name-that-is-too-long-to-be-an-actual-bu";
+            assert(b === e);
+        });
+
         it("should return valid names", () => {
             [
                 { b: "@atomist/k8s-sdm", e: "atomist-k8s-sdm" },

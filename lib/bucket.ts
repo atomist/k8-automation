@@ -22,9 +22,9 @@ export function safeBucketName(bucket: string | undefined): string {
     if (!bucket) {
         return "atomist-k8s-sdm";
     }
-    const safeBucket = bucket.toLowerCase().replace(/[^-A-Za-z0-9]+/g, "-").replace(/-+/g, "-").replace(/^-/, "").replace(/-$/, "");
+    const safeBucket = bucket.toLowerCase().replace(/[^-A-Za-z0-9]+/g, "-").replace(/-+/g, "-").replace(/^-/, "");
     const legalBucket = safeBucket.replace(/^goog/i, "atm").replace(/g[o0][o0]gle/ig, "atomist");
-    const lengthBucket = legalBucket.substring(0, 63);
+    const lengthBucket = legalBucket.substring(0, 63).replace(/-$/, "");
     if (lengthBucket.length < 3) {
         return lengthBucket + "0".repeat(3 - lengthBucket.length);
     }
