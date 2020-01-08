@@ -24,7 +24,6 @@ import {
     k8sSupport,
     kubernetesDeployFulfiller,
 } from "@atomist/sdm-pack-k8s";
-import * as _ from "lodash";
 import { machineOptions } from "./lib/configure";
 
 /**
