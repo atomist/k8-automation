@@ -36,9 +36,6 @@ async function configureSdm(cfg: LocalSoftwareDeliveryMachineConfiguration): Pro
         cluster: {
             workers: 1,
         },
-        logging: {
-            level: "debug",
-        },
         sdm: {
             goal: {
                 timeout: 1000 * 60 * 20,
