@@ -20,7 +20,9 @@ import {
     LocalSoftwareDeliveryMachineConfiguration,
 } from "@atomist/sdm-core";
 import { runningInK8s } from "@atomist/sdm-core/lib/goal/container/util";
-import * as _ from "lodash";
+import { defaultsDeep } from "lodash";
+import { homedir } from "os";
+import { join } from "path";
 import { safeBucketName } from "./bucket";
 
 /** SDM options. */
@@ -68,10 +70,10 @@ async function configureSdm(cfg: LocalSoftwareDeliveryMachineConfiguration): Pro
         cacheConfig = {
             sdm: {
                 cache: {
-                    path: "/tmp/k8s-sdm-cache",
+                    path: join(homedir(), ".atomist", "cache"),
                 },
             },
         };
     }
-    return _.defaultsDeep(cfg, cacheConfig, defaultConfig);
+    return defaultsDeep(cfg, cacheConfig, defaultConfig);
 }
