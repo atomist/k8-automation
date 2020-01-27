@@ -14,12 +14,10 @@
  * limitations under the License.
  */
 
-import { SoftwareDeliveryMachineConfiguration } from "@atomist/sdm";
-import {
-    ConfigureMachineOptions,
-    LocalSoftwareDeliveryMachineConfiguration,
-} from "@atomist/sdm-core";
 import { runningInK8s } from "@atomist/sdm-core/lib/goal/container/util";
+import { LocalSoftwareDeliveryMachineConfiguration } from "@atomist/sdm-core/lib/internal/machine/LocalSoftwareDeliveryMachineOptions";
+import { ConfigureMachineOptions } from "@atomist/sdm-core/lib/machine/configure";
+import { SoftwareDeliveryMachineConfiguration } from "@atomist/sdm/lib/api/machine/SoftwareDeliveryMachineOptions";
 import { defaultsDeep } from "lodash";
 import { homedir } from "os";
 import { join } from "path";

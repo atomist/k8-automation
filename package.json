@@ -25,11 +25,11 @@
   "main": "./index.js",
   "types": "./index.d.ts",
   "dependencies": {
-    "@atomist/automation-client": "^2.0.0-master.20191226145834",
-    "@atomist/sdm": "^2.0.0-master.20191226140700",
-    "@atomist/sdm-core": "^2.0.0-master.20191221184944",
-    "@atomist/sdm-pack-gcp": "0.1.0-master.20200107233243",
-    "@atomist/sdm-pack-k8s": "^2.0.0-master.20191223232125",
+    "@atomist/automation-client": "2.0.0-remove-index.20200117153458",
+    "@atomist/sdm": "2.0.0-remove-index.20200120225927",
+    "@atomist/sdm-core": "2.0.0-remove-index.20200123102027",
+    "@atomist/sdm-pack-gcp": "0.1.0-remove-index.20200107172000",
+    "@atomist/sdm-pack-k8s": "2.0.0-remove-index.20200128173839",
     "@types/lodash": "^4.14.136",
     "lodash": "^4.17.15"
   },
