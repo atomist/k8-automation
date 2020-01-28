@@ -29,7 +29,7 @@
     "@atomist/sdm": "2.0.0-remove-index.20200120225927",
     "@atomist/sdm-core": "2.0.0-remove-index.20200123102027",
     "@atomist/sdm-pack-gcp": "0.1.0-remove-index.20200107172000",
-    "@atomist/sdm-pack-k8s": "2.0.0-remove-index.20200127185113",
+    "@atomist/sdm-pack-k8s": "2.0.0-remove-index.20200128145629",
     "@types/lodash": "^4.14.136",
     "lodash": "^4.17.15"
   },
