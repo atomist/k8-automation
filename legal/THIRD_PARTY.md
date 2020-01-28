@@ -25,7 +25,7 @@ This page details all runtime OSS dependencies of `@atomist/k8s-sdm`.
 |[GPL-3.0](#gpl-30)|3|
 |[ISC](#isc)|36|
 |[MIT AND BSD-3-Clause](#mit-and-bsd-3-clause)|1|
-|[MIT](#mit)|736|
+|[MIT](#mit)|737|
 |[PSF](#psf)|2|
 |[Public Domain](#public-domain)|1|
 |[UNKNOWN](#unknown)|2|
@@ -51,7 +51,7 @@ Apache License 2.0 - [http://www.apache.org/licenses/LICENSE-2.0](http://www.apa
 |------|---------|-----------|------------|
 |`@atomist/sdm-core`|`2.0.0-master.20191221184944`|Atomist|[https://github.com/atomist/sdm-core](https://github.com/atomist/sdm-core)|
 |`@atomist/sdm-pack-gcp`|`0.1.0-master.20200107233243`|Atomist|[https://github.com/atomist/sdm-pack-gcp](https://github.com/atomist/sdm-pack-gcp)|
-|`@atomist/sdm-pack-k8s`|`2.0.0-master.20191223232125`|Atomist|[https://github.com/atomist/sdm-pack-k8s](https://github.com/atomist/sdm-pack-k8s)|
+|`@atomist/sdm-pack-k8s`|`2.0.0-master.20200128172514`|Atomist|[https://github.com/atomist/sdm-pack-k8s](https://github.com/atomist/sdm-pack-k8s)|
 |`@atomist/sdm`|`2.0.0-master.20191226140700`|Atomist|[https://github.com/atomist/sdm](https://github.com/atomist/sdm)|
 |`@atomist/slack-messages`|`1.1.1`|Atomist|[https://github.com/atomist/slack-messages](https://github.com/atomist/slack-messages)|
 |`@google-cloud/common`|`2.2.5`|Google Inc.|[https://github.com/googleapis/nodejs-common](https://github.com/googleapis/nodejs-common)|
@@ -305,6 +305,7 @@ MIT License - [https://opensource.org/licenses/MIT](https://opensource.org/licen
 |`@types/node`|`10.17.13`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/node`|`11.11.1`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/node`|`12.12.22`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
+|`@types/node`|`12.12.25`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/passport-http-bearer`|`1.0.34`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/passport-http`|`0.3.8`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/passport`|`1.0.2`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
