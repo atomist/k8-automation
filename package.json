@@ -29,7 +29,7 @@
     "@atomist/sdm": "^2.0.0-master.20191226140700",
     "@atomist/sdm-core": "^2.0.0-master.20191221184944",
     "@atomist/sdm-pack-gcp": "0.1.0-master.20200107233243",
-    "@atomist/sdm-pack-k8s": "^2.0.0-master.20191223232125",
+    "@atomist/sdm-pack-k8s": "2.0.0-master.20200128172514",
     "@types/lodash": "^4.14.136",
     "lodash": "^4.17.15"
   },
