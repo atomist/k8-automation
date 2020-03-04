@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 -   Create fulfiller sdm. [b57f514](https://github.com/atomist/k8s-sdm/commit/b57f514964ccc8f15242f66c1b408de07ffcacdb)
 -   Add spec for sync under gvisor sandbox. [0243457](https://github.com/atomist/k8s-sdm/commit/0243457a0a836c4d50e4cacc9a691c0787ff6312)
 -   Add runtimeClassName to gvisor spec. [0cff79a](https://github.com/atomist/k8s-sdm/commit/0cff79a6eb07a9cd1434431ef128c3577cf9de7a)
+-   Update Atomist dependencies and changelog. [2083efa](https://github.com/atomist/k8s-sdm/commit/2083efa6d8f41cd124caa21885823fa6a593df72)
 
 ### Changed
 
@@ -30,6 +31,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 -   Give k8s-sdm more time to start up, remove fsgroup. [c20924f](https://github.com/atomist/k8s-sdm/commit/c20924f74b980d2f8d30ed95b75200d38bde20c8)
 -   Improve local cache path and TypeScript config. [47680c7](https://github.com/atomist/k8s-sdm/commit/47680c77c742b9d3bc49e9495674715e12d3e0f2)
 
+### Removed
+
+-   Remove useless config default. [c628759](https://github.com/atomist/k8s-sdm/commit/c6287597cc7505ab9ec75de742a35a3bada58276)
+-   Remove unused lodash import. [4073851](https://github.com/atomist/k8s-sdm/commit/4073851cee87307d2f2bb21e9bf1861bd9100b09)
+
 ### Fixed
 
 -   Update sdm-pack-k8s for multi-spec yaml fix. [d375bab](https://github.com/atomist/k8s-sdm/commit/d375bab99583f59f2a49084633baab44576bfc57)
@@ -39,11 +45,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 -   Fix multi-callback and goal state. [2902ff3](https://github.com/atomist/k8s-sdm/commit/2902ff32753ae1702e84519ebed5e9f4f96f4504)
 -   Properly add extension packs. [067de0b](https://github.com/atomist/k8s-sdm/commit/067de0b7f43a95772ff254e981d3c8742dfcca5b)
 -   Update sdm-pack-k8s for FulfillGoalOnRequested fix. [2e9d8a1](https://github.com/atomist/k8s-sdm/commit/2e9d8a1bf28ddc3c2e9ce0b95e9e1a723ee3eff3)
-
-### Removed
-
--   Remove useless config default. [c628759](https://github.com/atomist/k8s-sdm/commit/c6287597cc7505ab9ec75de742a35a3bada58276)
--   Remove unused lodash import. [4073851](https://github.com/atomist/k8s-sdm/commit/4073851cee87307d2f2bb21e9bf1861bd9100b09)
 
 ## [1.6.1](https://github.com/atomist/k8s-sdm/compare/1.6.0...1.6.1) - 2019-09-27
 
