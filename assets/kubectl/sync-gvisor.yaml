@@ -99,7 +99,7 @@ spec:
               value: /home/atomist
             - name: TMPDIR
               value: /tmp
-          image: atomist/k8s-sdm:1.6.1
+          image: atomist/k8s-sdm:1.7.0
           livenessProbe:
             httpGet:
               path: /health
@@ -144,7 +144,7 @@ spec:
           env:
             - name: HOME
               value: /home/atomist
-          image: atomist/sdm-base:0.3.0
+          image: atomist/sdm-base:0.4.0
           name: atomist-home-git
           securityContext:
             allowPrivilegeEscalation: false
