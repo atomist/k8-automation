@@ -7,6 +7,44 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased](https://github.com/atomist/k8s-sdm/compare/1.6.1...HEAD)
 
+### Added
+
+-   Create fulfiller sdm. [b57f514](https://github.com/atomist/k8s-sdm/commit/b57f514964ccc8f15242f66c1b408de07ffcacdb)
+-   Add spec for sync under gvisor sandbox. [0243457](https://github.com/atomist/k8s-sdm/commit/0243457a0a836c4d50e4cacc9a691c0787ff6312)
+-   Add runtimeClassName to gvisor spec. [0cff79a](https://github.com/atomist/k8s-sdm/commit/0cff79a6eb07a9cd1434431ef128c3577cf9de7a)
+
+### Changed
+
+-   Give access to namespace when namespace-scoped. [d77b829](https://github.com/atomist/k8s-sdm/commit/d77b829ff90446db5da8f52723ade2a4b860ce22)
+-   Set default workers to 1. [4f79a26](https://github.com/atomist/k8s-sdm/commit/4f79a26c555ddc8b1de7831e6b17b6b5bcdd25d4)
+-   Expose fulfilled goals in atomist.yaml. [8675ffc](https://github.com/atomist/k8s-sdm/commit/8675ffc4d8f154ec08b0093ccce0c7bba732536d)
+-   Print schedulers when k8s not found. [2723e33](https://github.com/atomist/k8s-sdm/commit/2723e33b732065761877babf3a0e6a34b4db9d73)
+-   Execute goal if already scheduled. [257bd02](https://github.com/atomist/k8s-sdm/commit/257bd02404f4754dd0935a9ae5717d458c2432c6)
+-   Persist removal of callback to goal event data. [8c2ab16](https://github.com/atomist/k8s-sdm/commit/8c2ab162443ddcf4790b5bfa17b89b620de96879)
+-   Filter out sdm init containers. [c0a6b5e](https://github.com/atomist/k8s-sdm/commit/c0a6b5e631d0cd7bcb7c4f9c0c9feda9b7ddadd0)
+-   Prefer container security context. [3cb1d2d](https://github.com/atomist/k8s-sdm/commit/3cb1d2d6c01ce5b2600df16e9df48463c8b73c1c)
+-   Set defaultMode for k8s-sdm secret to 292. [af45b9d](https://github.com/atomist/k8s-sdm/commit/af45b9d4349fa493d020b2b0233f70ad9d5317a3)
+-   Pure TypeScript, custom bucket, no logging. [05ee473](https://github.com/atomist/k8s-sdm/commit/05ee473a3958918050e891233974ad5fdee6a7bd)
+-   Rearrange SDM configuration. [83691ec](https://github.com/atomist/k8s-sdm/commit/83691ecbb93c1b698348c6ebf9eaf15e4079ea7f)
+-   Update sdm-pack-gcp. [97f3733](https://github.com/atomist/k8s-sdm/commit/97f37335f3d613dd331826ef7bae32321ae08ff7)
+-   Give k8s-sdm more time to start up, remove fsgroup. [c20924f](https://github.com/atomist/k8s-sdm/commit/c20924f74b980d2f8d30ed95b75200d38bde20c8)
+-   Improve local cache path and TypeScript config. [47680c7](https://github.com/atomist/k8s-sdm/commit/47680c77c742b9d3bc49e9495674715e12d3e0f2)
+
+### Fixed
+
+-   Update sdm-pack-k8s for multi-spec yaml fix. [d375bab](https://github.com/atomist/k8s-sdm/commit/d375bab99583f59f2a49084633baab44576bfc57)
+-   Update sdm-pack-k8s for scope fix. [005c8e6](https://github.com/atomist/k8s-sdm/commit/005c8e69685c7e08c2432b0cce2acc0ab441313f)
+-   Update sdm-pack-k8s for namespace fix. [6b26526](https://github.com/atomist/k8s-sdm/commit/6b2652681aba245e76db7344de3d4d9e999ba528)
+-   Ensure ATOMIST_GOAL_SCHEDULER set in k8s. [b424f00](https://github.com/atomist/k8s-sdm/commit/b424f0086d1d6839921bebb7a00c96bda2702255)
+-   Fix multi-callback and goal state. [2902ff3](https://github.com/atomist/k8s-sdm/commit/2902ff32753ae1702e84519ebed5e9f4f96f4504)
+-   Properly add extension packs. [067de0b](https://github.com/atomist/k8s-sdm/commit/067de0b7f43a95772ff254e981d3c8742dfcca5b)
+-   Update sdm-pack-k8s for FulfillGoalOnRequested fix. [2e9d8a1](https://github.com/atomist/k8s-sdm/commit/2e9d8a1bf28ddc3c2e9ce0b95e9e1a723ee3eff3)
+
+### Removed
+
+-   Remove useless config default. [c628759](https://github.com/atomist/k8s-sdm/commit/c6287597cc7505ab9ec75de742a35a3bada58276)
+-   Remove unused lodash import. [4073851](https://github.com/atomist/k8s-sdm/commit/4073851cee87307d2f2bb21e9bf1861bd9100b09)
+
 ## [1.6.1](https://github.com/atomist/k8s-sdm/compare/1.6.0...1.6.1) - 2019-09-27
 
 ### Fixed
