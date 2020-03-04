@@ -1,4 +1,4 @@
-FROM atomist/sdm-base:0.4.0
+FROM atomist/sdm-base:0.4.1
 
 COPY package.json package-lock.json ./
 RUN npm ci \
