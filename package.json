@@ -1,6 +1,6 @@
 {
   "name": "@atomist/k8s-sdm",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "Atomist SDM for scheduling and deploying to Kubernetes",
   "author": {
     "name": "Atomist",
