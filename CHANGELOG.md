@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased](https://github.com/atomist/k8s-sdm/compare/1.7.0...HEAD)
 
+### Added
+
+-   Update sdm to support GitHub app provider. [451399e](https://github.com/atomist/k8s-sdm/commit/451399e2733bbcbf80355e62145f2ed3158d97e4)
+
 ### Changed
 
 -   Update Atomist deps, remove deprecated deps. [c0b3254](https://github.com/atomist/k8s-sdm/commit/c0b3254b308e35d8bfc2a475ea4aaae9815f855d)
