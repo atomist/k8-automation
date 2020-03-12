@@ -23,13 +23,6 @@ import { homedir } from "os";
 import { join } from "path";
 import { safeBucketName } from "./bucket";
 
-/** SDM options. */
-export const machineOptions: ConfigureMachineOptions = {
-    preProcessors: [
-        configureSdm,
-    ],
-};
-
 /** Provide SDM configuration. */
 async function configureSdm(cfg: LocalSoftwareDeliveryMachineConfiguration): Promise<LocalSoftwareDeliveryMachineConfiguration> {
     const defaultConfig: SoftwareDeliveryMachineConfiguration = {
@@ -75,3 +68,10 @@ async function configureSdm(cfg: LocalSoftwareDeliveryMachineConfiguration): Pro
     }
     return defaultsDeep(cfg, cacheConfig, defaultConfig);
 }
+
+/** SDM options. */
+export const machineOptions: ConfigureMachineOptions = {
+    preProcessors: [
+        configureSdm,
+    ],
+};
