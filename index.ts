@@ -14,16 +14,12 @@
  * limitations under the License.
  */
 
-import {
-    configure,
-    K8sContainerFulfiller,
-    k8sGoalSchedulingSupport,
-} from "@atomist/sdm-core";
-import { gcpSupport } from "@atomist/sdm-pack-gcp";
-import {
-    k8sSupport,
-    kubernetesDeployFulfiller,
-} from "@atomist/sdm-pack-k8s";
+import { configure } from "@atomist/sdm/lib/core/machine/configure";
+import { gcpSupport } from "@atomist/sdm/lib/core/pack/gcp/index";
+import { k8sContainerFulfiller } from "@atomist/sdm/lib/core/pack/k8s/container";
+import { kubernetesDeployFulfiller } from "@atomist/sdm/lib/core/pack/k8s/deploy/fulfiller";
+import { k8sSupport } from "@atomist/sdm/lib/core/pack/k8s/k8s";
+import { k8sGoalSchedulingSupport } from "@atomist/sdm/lib/core/pack/k8s/scheduler/goalScheduling";
 import { machineOptions } from "./lib/configure";
 
 /**
@@ -40,7 +36,7 @@ export const configuration = configure(async sdm => {
 /**
  * Fulfill containers goals sent to this SDM.
  */
-export const containerFulfill = K8sContainerFulfiller;
+export const containerFulfill = k8sContainerFulfiller();
 
 /**
  * Fulfill Kubernetes deploy goals sent to this SDM.
