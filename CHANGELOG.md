@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 
 -   Update sdm for sync repo creds fix. [dd4d920](https://github.com/atomist/k8s-sdm/commit/dd4d920e65f4f1d11151521838f273de578f4ac6)
+-   Update sdm to move sync repo creds to worker. [d06a3e0](https://github.com/atomist/k8s-sdm/commit/d06a3e04886b96d798c2a65d47262ecbb7d86743)
 
 ## [1.7.0](https://github.com/atomist/k8s-sdm/compare/1.6.1...1.7.0) - 2020-03-04
 
