@@ -26,7 +26,7 @@
   "types": "./index.d.ts",
   "dependencies": {
     "@atomist/automation-client": "^2.0.0-master.20200311165330",
-    "@atomist/sdm": "2.0.0-master.20200325060840",
+    "@atomist/sdm": "2.0.0-master.20200325133634",
     "@types/lodash": "^4.14.136",
     "lodash": "^4.17.15"
   },
