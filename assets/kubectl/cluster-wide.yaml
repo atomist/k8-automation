@@ -142,7 +142,7 @@ spec:
           env:
             - name: HOME
               value: /home/atomist
-          image: atomist/sdm-base:0.4.0
+          image: atomist/sdm-base:0.4.1
           name: atomist-home-git
           securityContext:
             allowPrivilegeEscalation: false
