@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 -   Update Atomist deps, remove deprecated deps. [c0b3254](https://github.com/atomist/k8s-sdm/commit/c0b3254b308e35d8bfc2a475ea4aaae9815f855d)
 
+### Removed
+
+-   Remove k8s cluster registration. [6264fd7](https://github.com/atomist/k8s-sdm/commit/6264fd79862bf69d3ad5f8341e168791af476fe0)
+
 ### Fixed
 
 -   Update sdm for sync repo creds fix. [dd4d920](https://github.com/atomist/k8s-sdm/commit/dd4d920e65f4f1d11151521838f273de578f4ac6)
