@@ -29,7 +29,7 @@ export const configuration = configure(async sdm => {
     sdm.addExtensionPacks(
         gcpSupport(),
         k8sGoalSchedulingSupport(),
-        k8sSupport({ registerCluster: true }),
+        k8sSupport(),
     );
 }, machineOptions);
 
