@@ -15,11 +15,11 @@
  */
 
 import { configure } from "@atomist/sdm/lib/core/machine/configure";
-import { gcpSupport } from "@atomist/sdm/lib/core/pack/gcp/index";
-import { k8sContainerFulfiller } from "@atomist/sdm/lib/core/pack/k8s/container";
-import { kubernetesDeployFulfiller } from "@atomist/sdm/lib/core/pack/k8s/deploy/fulfiller";
-import { k8sSupport } from "@atomist/sdm/lib/core/pack/k8s/k8s";
-import { k8sGoalSchedulingSupport } from "@atomist/sdm/lib/core/pack/k8s/scheduler/goalScheduling";
+import { gcpSupport } from "@atomist/sdm/lib/pack/gcp/index";
+import { k8sContainerFulfiller } from "@atomist/sdm/lib/pack/k8s/container";
+import { kubernetesDeployFulfiller } from "@atomist/sdm/lib/pack/k8s/deploy/fulfiller";
+import { k8sSupport } from "@atomist/sdm/lib/pack/k8s/k8s";
+import { k8sGoalSchedulingSupport } from "@atomist/sdm/lib/pack/k8s/scheduler/goalScheduling";
 import { machineOptions } from "./lib/configure";
 
 /**
