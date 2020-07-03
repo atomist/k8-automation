@@ -18,9 +18,7 @@ import * as assert from "power-assert";
 import { safeBucketName } from "../lib/bucket";
 
 describe("bucket", () => {
-
     describe("safeBucketName", () => {
-
         it("should return the default bucket name", () => {
             [undefined, ""].forEach(n => {
                 const b = safeBucketName(n);
@@ -83,7 +81,5 @@ describe("bucket", () => {
                 assert(b === n.e);
             });
         });
-
     });
-
 });

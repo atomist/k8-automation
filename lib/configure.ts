@@ -24,7 +24,9 @@ import { join } from "path";
 import { safeBucketName } from "./bucket";
 
 /** Provide SDM configuration. */
-async function configureSdm(cfg: LocalSoftwareDeliveryMachineConfiguration): Promise<LocalSoftwareDeliveryMachineConfiguration> {
+async function configureSdm(
+    cfg: LocalSoftwareDeliveryMachineConfiguration,
+): Promise<LocalSoftwareDeliveryMachineConfiguration> {
     const defaultConfig: SoftwareDeliveryMachineConfiguration = {
         cluster: {
             workers: 1,
@@ -71,7 +73,5 @@ async function configureSdm(cfg: LocalSoftwareDeliveryMachineConfiguration): Pro
 
 /** SDM options. */
 export const machineOptions: ConfigureMachineOptions = {
-    preProcessors: [
-        configureSdm,
-    ],
+    preProcessors: [configureSdm],
 };
