@@ -26,7 +26,11 @@ import { machineOptions } from "./lib/configure";
  * Provide a default configuration for this SDM.
  */
 export const configuration = configure(async sdm => {
-    sdm.addExtensionPacks(gcpSupport(), k8sGoalSchedulingSupport(), k8sSupport());
+	sdm.addExtensionPacks(
+		gcpSupport(),
+		k8sGoalSchedulingSupport(),
+		k8sSupport(),
+	);
 }, machineOptions);
 
 /**

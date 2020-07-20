@@ -27,10 +27,10 @@
       "error",
       {
         "arrowParens": "avoid",
-        "printWidth": 120,
         "quoteProps": "consistent",
         "tabWidth": 4,
-        "trailingComma": "all"
+        "trailingComma": "all",
+		"useTabs": true
       }
     ]
   }

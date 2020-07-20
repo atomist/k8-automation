@@ -25,53 +25,53 @@ import { safeBucketName } from "./bucket";
 
 /** Provide SDM configuration. */
 async function configureSdm(
-    cfg: LocalSoftwareDeliveryMachineConfiguration,
+	cfg: LocalSoftwareDeliveryMachineConfiguration,
 ): Promise<LocalSoftwareDeliveryMachineConfiguration> {
-    const defaultConfig: SoftwareDeliveryMachineConfiguration = {
-        cluster: {
-            workers: 1,
-        },
-        sdm: {
-            goal: {
-                timeout: 1000 * 60 * 20,
-            },
-            k8s: {
-                job: {
-                    cleanupInterval: 1000 * 60 * 10,
-                },
-            },
-            cache: {
-                enabled: true,
-            },
-        },
-    };
-    let cacheConfig: SoftwareDeliveryMachineConfiguration;
-    if (runningInK8s()) {
-        process.env.ATOMIST_GOAL_SCHEDULER = "kubernetes";
-        if (cfg.logging) {
-            cfg.logging.color = false;
-        }
-        cacheConfig = {
-            sdm: {
-                cache: {
-                    bucket: safeBucketName(cfg.name),
-                    path: "k8s-sdm-cache",
-                },
-            },
-        };
-    } else {
-        cacheConfig = {
-            sdm: {
-                cache: {
-                    path: join(homedir(), ".atomist", "cache"),
-                },
-            },
-        };
-    }
-    return defaultsDeep(cfg, cacheConfig, defaultConfig);
+	const defaultConfig: SoftwareDeliveryMachineConfiguration = {
+		cluster: {
+			workers: 1,
+		},
+		sdm: {
+			goal: {
+				timeout: 1000 * 60 * 20,
+			},
+			k8s: {
+				job: {
+					cleanupInterval: 1000 * 60 * 10,
+				},
+			},
+			cache: {
+				enabled: true,
+			},
+		},
+	};
+	let cacheConfig: SoftwareDeliveryMachineConfiguration;
+	if (runningInK8s()) {
+		process.env.ATOMIST_GOAL_SCHEDULER = "kubernetes";
+		if (cfg.logging) {
+			cfg.logging.color = false;
+		}
+		cacheConfig = {
+			sdm: {
+				cache: {
+					bucket: safeBucketName(cfg.name),
+					path: "k8s-sdm-cache",
+				},
+			},
+		};
+	} else {
+		cacheConfig = {
+			sdm: {
+				cache: {
+					path: join(homedir(), ".atomist", "cache"),
+				},
+			},
+		};
+	}
+	return defaultsDeep(cfg, cacheConfig, defaultConfig);
 }
 
 /** SDM options. */
 export const machineOptions: ConfigureMachineOptions = {
-    preProcessors: [configureSdm],
+	preProcessors: [configureSdm],
 };
