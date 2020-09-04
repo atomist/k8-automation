@@ -28,7 +28,7 @@ This page details all runtime OSS dependencies of `@atomist/k8s-sdm`.
 |[MIT AND BSD-3-Clause](#mit-and-bsd-3-clause)|1|
 |[MIT AND CC-BY-3.0](#mit-and-cc-by-30)|1|
 |[MIT AND Zlib](#mit-and-zlib)|1|
-|[MIT](#mit)|828|
+|[MIT](#mit)|829|
 |[PSF](#psf)|2|
 |[Public Domain](#public-domain)|1|
 |[UNKNOWN](#unknown)|2|
@@ -54,15 +54,15 @@ Apache License 2.0 - [http://www.apache.org/licenses/LICENSE-2.0](http://www.apa
 
 | Name | Version | Publisher | Repository |
 |------|---------|-----------|------------|
-|`@atomist/sdm`|`2.0.0-main.20200903175511`|Atomist|[https://github.com/atomist/sdm](https://github.com/atomist/sdm)|
+|`@atomist/sdm`|`2.0.0`|Atomist|[https://github.com/atomist/sdm](https://github.com/atomist/sdm)|
 |`@atomist/slack-messages`|`1.1.1`|Atomist|[https://github.com/atomist/slack-messages](https://github.com/atomist/slack-messages)|
 |`@google-cloud/common`|`3.3.3`|Google Inc.|[https://github.com/googleapis/nodejs-common](https://github.com/googleapis/nodejs-common)|
 |`@google-cloud/paginator`|`3.0.5`|Google Inc.|[https://github.com/googleapis/nodejs-paginator](https://github.com/googleapis/nodejs-paginator)|
 |`@google-cloud/projectify`|`2.0.1`|Google Inc.|[https://github.com/googleapis/nodejs-projectify](https://github.com/googleapis/nodejs-projectify)|
-|`@google-cloud/promisify`|`2.0.2`|Google Inc.|[https://github.com/googleapis/nodejs-promisify](https://github.com/googleapis/nodejs-promisify)|
+|`@google-cloud/promisify`|`2.0.3`|Google Inc.|[https://github.com/googleapis/nodejs-promisify](https://github.com/googleapis/nodejs-promisify)|
 |`@google-cloud/storage`|`5.3.0`|Google Inc.|[https://github.com/googleapis/nodejs-storage](https://github.com/googleapis/nodejs-storage)|
 |`@kubernetes/client-node`|`0.12.0`|Kubernetes Authors|[https://github.com/kubernetes-client/javascript](https://github.com/kubernetes-client/javascript)|
-|`aws-sdk`|`2.745.0`|Amazon Web Services|[https://github.com/aws/aws-sdk-js](https://github.com/aws/aws-sdk-js)|
+|`aws-sdk`|`2.746.0`|Amazon Web Services|[https://github.com/aws/aws-sdk-js](https://github.com/aws/aws-sdk-js)|
 |`aws-sign2`|`0.7.0`|Mikeal Rogers|[https://github.com/mikeal/aws-sign](https://github.com/mikeal/aws-sign)|
 |`before-after-hook`|`2.1.0`|Gregor Martynus|[https://github.com/gr2m/before-after-hook](https://github.com/gr2m/before-after-hook)|
 |`caseless`|`0.12.0`|Mikeal Rogers|[https://github.com/mikeal/caseless](https://github.com/mikeal/caseless)|
@@ -199,7 +199,7 @@ GNU General Public License v3.0 only - [https://www.gnu.org/licenses/gpl-3.0-sta
 | Name | Version | Publisher | Repository |
 |------|---------|-----------|------------|
 |`@atomist/antlr`|`1.0.3-master.20200709215047`|Atomist|[https://github.com/atomist/antlr-ts](https://github.com/atomist/antlr-ts)|
-|`@atomist/automation-client`|`2.0.0-main.20200903155129`|Atomist|[https://github.com/atomist/automation-client](https://github.com/atomist/automation-client)|
+|`@atomist/automation-client`|`2.0.0`|Atomist|[https://github.com/atomist/automation-client](https://github.com/atomist/automation-client)|
 |`@atomist/microgrammar`|`1.2.1`|Atomist|[https://github.com/atomist/microgrammar](https://github.com/atomist/microgrammar)|
 |`@atomist/tree-path`|`1.0.3`|Atomist|[https://github.com/atomist/tree-path](https://github.com/atomist/tree-path)|
 |`jszip`|`3.5.0`|Stuart Knightley|[https://github.com/Stuk/jszip](https://github.com/Stuk/jszip)|
@@ -310,7 +310,7 @@ MIT License - [https://opensource.org/licenses/MIT](https://opensource.org/licen
 |`@octokit/endpoint`|`6.0.5`||[https://github.com/octokit/endpoint.js](https://github.com/octokit/endpoint.js)|
 |`@octokit/graphql`|`4.5.4`||[https://github.com/octokit/graphql.js](https://github.com/octokit/graphql.js)|
 |`@octokit/plugin-paginate-rest`|`1.1.2`||[https://github.com/octokit/plugin-paginate-rest.js](https://github.com/octokit/plugin-paginate-rest.js)|
-|`@octokit/plugin-paginate-rest`|`2.3.1`||[https://github.com/octokit/plugin-paginate-rest.js](https://github.com/octokit/plugin-paginate-rest.js)|
+|`@octokit/plugin-paginate-rest`|`2.3.2`||[https://github.com/octokit/plugin-paginate-rest.js](https://github.com/octokit/plugin-paginate-rest.js)|
 |`@octokit/plugin-request-log`|`1.0.0`||[https://github.com/octokit/plugin-request-log.js](https://github.com/octokit/plugin-request-log.js)|
 |`@octokit/plugin-rest-endpoint-methods`|`2.4.0`||[https://github.com/octokit/plugin-rest-endpoint-methods.js](https://github.com/octokit/plugin-rest-endpoint-methods.js)|
 |`@octokit/plugin-rest-endpoint-methods`|`4.1.3`||[https://github.com/octokit/plugin-rest-endpoint-methods.js](https://github.com/octokit/plugin-rest-endpoint-methods.js)|
@@ -363,7 +363,7 @@ MIT License - [https://opensource.org/licenses/MIT](https://opensource.org/licen
 |`@types/node-statsd`|`0.1.2`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/node`|`10.17.29`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/node`|`12.12.55`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
-|`@types/node`|`14.6.3`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
+|`@types/node`|`14.6.4`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/passport-http-bearer`|`1.0.35`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/passport-http`|`0.3.8`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/passport`|`1.0.4`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
@@ -658,6 +658,7 @@ MIT License - [https://opensource.org/licenses/MIT](https://opensource.org/licen
 |`git-rev-sync`|`2.0.0`|kurttheviking|[https://github.com/kurttheviking/git-rev-sync-js](https://github.com/kurttheviking/git-rev-sync-js)|
 |`git-up`|`4.0.2`|Ionică Bizău|[https://github.com/IonicaBizau/git-up](https://github.com/IonicaBizau/git-up)|
 |`git-url-parse`|`11.1.3`|Ionică Bizău|[https://github.com/IonicaBizau/git-url-parse](https://github.com/IonicaBizau/git-url-parse)|
+|`git-url-parse`|`11.2.0`|Ionică Bizău|[https://github.com/IonicaBizau/git-url-parse](https://github.com/IonicaBizau/git-url-parse)|
 |`globals`|`11.12.0`|Sindre Sorhus|[https://github.com/sindresorhus/globals](https://github.com/sindresorhus/globals)|
 |`globby`|`10.0.1`|Sindre Sorhus|[https://github.com/sindresorhus/globby](https://github.com/sindresorhus/globby)|
 |`globby`|`11.0.1`|Sindre Sorhus|[https://github.com/sindresorhus/globby](https://github.com/sindresorhus/globby)|
@@ -855,7 +856,7 @@ MIT License - [https://opensource.org/licenses/MIT](https://opensource.org/licen
 |`object-inspect`|`1.7.0`|James Halliday|[https://github.com/substack/object-inspect](https://github.com/substack/object-inspect)|
 |`object-keys`|`1.1.0`|Jordan Harband|[https://github.com/ljharb/object-keys](https://github.com/ljharb/object-keys)|
 |`object-keys`|`1.1.1`|Jordan Harband|[https://github.com/ljharb/object-keys](https://github.com/ljharb/object-keys)|
-|`object-treeify`|`1.1.26`|Lukas Siemon|[https://github.com/blackflux/object-treeify](https://github.com/blackflux/object-treeify)|
+|`object-treeify`|`1.1.27`|Lukas Siemon|[https://github.com/blackflux/object-treeify](https://github.com/blackflux/object-treeify)|
 |`object.assign`|`4.1.0`|Jordan Harband|[https://github.com/ljharb/object.assign](https://github.com/ljharb/object.assign)|
 |`object.getownpropertydescriptors`|`2.1.0`|Jordan Harband|[https://github.com/es-shims/object.getownpropertydescriptors](https://github.com/es-shims/object.getownpropertydescriptors)|
 |`octokit-pagination-methods`|`1.1.0`|Gregor Martynus|[https://github.com/gr2m/octokit-pagination-methods](https://github.com/gr2m/octokit-pagination-methods)|
@@ -1033,7 +1034,7 @@ MIT License - [https://opensource.org/licenses/MIT](https://opensource.org/licen
 |`tree-kill`|`1.2.2`|Peteris Krumins|[https://github.com/pkrumins/node-tree-kill](https://github.com/pkrumins/node-tree-kill)|
 |`treeify`|`1.1.0`|Luke Plaster|[https://github.com/notatestuser/treeify](https://github.com/notatestuser/treeify)|
 |`triple-beam`|`1.3.0`|Charlie Robbins|[https://github.com/winstonjs/triple-beam](https://github.com/winstonjs/triple-beam)|
-|`ts-essentials`|`6.0.7`|Krzysztof Kaczor|[https://github.com/krzkaczor/ts-essentials](https://github.com/krzkaczor/ts-essentials)|
+|`ts-essentials`|`7.0.0`|Krzysztof Kaczor|[https://github.com/krzkaczor/ts-essentials](https://github.com/krzkaczor/ts-essentials)|
 |`ts-invariant`|`0.4.4`|Ben Newman|[https://github.com/apollographql/invariant-packages](https://github.com/apollographql/invariant-packages)|
 |`ts-node`|`8.10.2`|Blake Embrey|[https://github.com/TypeStrong/ts-node](https://github.com/TypeStrong/ts-node)|
 |`type-fest`|`0.11.0`|Sindre Sorhus|[https://github.com/sindresorhus/type-fest](https://github.com/sindresorhus/type-fest)|
