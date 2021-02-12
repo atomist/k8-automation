@@ -1,0 +1,184 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@atomist/k8s-sdm</title>
+	<meta name="description" content="Documentation for @atomist/k8s-sdm">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@atomist/k8s-sdm</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>@atomist/k8s-sdm</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<p align="center">
+					<img src="https://images.atomist.com/sdm/SDM-Logo-Dark.png">
+				</p>
+				<a href="#atomistk8s-sdm" id="atomistk8s-sdm" style="color: inherit; text-decoration: none;">
+					<h1>@atomist/k8s-sdm</h1>
+				</a>
+				<p><a href="https://www.npmjs.com/package/@atomist/k8s-sdm"><img src="https://img.shields.io/npm/v/@atomist/k8s-sdm.svg" alt="npm version"></a>
+				<a href="https://hub.docker.com/r/atomist/k8s-sdm/"><img src="https://img.shields.io/docker/pulls/atomist/k8s-sdm.svg" alt="Docker Pulls"></a></p>
+				<p>This repository contains a software delivery machine (SDM) for
+					deploying applications to Kubernetes using the <a href="https://atomist.com/" title="Atomist - How Teams Deliver Software">Atomist</a> API.
+					Currently, deploying Docker images as deployments with optional
+				services and ingress rules is supported.</p>
+				<p>Software delivery machines enable you to control your delivery process
+					in code.  Think of it as an API for your software delivery.  See the
+					<a href="https://docs.atomist.com/" title="Atomist Documentation">Atomist documentation</a> for more information on the
+					concept of a software delivery machine and how to create and develop
+				an SDM.</p>
+				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
+					<h2>Getting started</h2>
+				</a>
+				<p>See the <a href="https://docs.atomist.com/quick-start/" title="Atomist - Developer Quick Start">Developer Quick Start</a> to jump straight to
+				creating an SDM.</p>
+				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
+					<h2>Contributing</h2>
+				</a>
+				<p>Contributions to this project from community members are encouraged
+					and appreciated. Please review the <a href="CONTRIBUTING.md">Contributing
+					Guidelines</a> for more information. Also see the
+				<a href="#development">Development</a> section in this document.</p>
+				<a href="#code-of-conduct" id="code-of-conduct" style="color: inherit; text-decoration: none;">
+					<h2>Code of conduct</h2>
+				</a>
+				<p>This project is governed by the <a href="CODE_OF_CONDUCT.md">Code of
+					Conduct</a>. You are expected to act in accordance
+					with this code by participating. Please report any unacceptable
+				behavior to <a href="mailto:&#x63;&#111;&#x64;&#x65;&#x2d;&#x6f;&#x66;&#x2d;&#x63;&#111;&#x6e;&#x64;&#x75;&#99;&#116;&#64;&#97;&#116;&#x6f;&#x6d;&#x69;&#x73;&#116;&#46;&#99;&#111;&#x6d;">&#x63;&#111;&#x64;&#x65;&#x2d;&#x6f;&#x66;&#x2d;&#x63;&#111;&#x6e;&#x64;&#x75;&#99;&#116;&#64;&#97;&#116;&#x6f;&#x6d;&#x69;&#x73;&#116;&#46;&#99;&#111;&#x6d;</a>.</p>
+				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+					<h2>Documentation</h2>
+				</a>
+				<p>Please see <a href="https://docs.atomist.com/" title="Atomist Documentation">docs.atomist.com</a> for
+				<a href="https://docs.atomist.com/developer/sdm/" title="Atomist Documentation - SDM Developer">developer</a> documentation.</p>
+				<a href="#connect" id="connect" style="color: inherit; text-decoration: none;">
+					<h2>Connect</h2>
+				</a>
+				<p>Follow <a href="https://twitter.com/atomist" title="Atomist on Twitter">@atomist</a> and <a href="https://the-composition.com/" title="The Composition - The Official Atomist Blog">The Composition</a>
+				blog related to SDM.</p>
+				<a href="#support" id="support" style="color: inherit; text-decoration: none;">
+					<h2>Support</h2>
+				</a>
+				<p>General support questions should be discussed in the <code>#help</code>
+				channel in the <a href="https://join.atomist.com/" title="Atomist Community Slack">Atomist community Slack workspace</a>.</p>
+				<p>If you find a problem, please create an <a href="https://github.com/atomist/k8s-sdm/issues">issue</a>.</p>
+				<a href="#development" id="development" style="color: inherit; text-decoration: none;">
+					<h2>Development</h2>
+				</a>
+				<p>You will need to install <a href="https://nodejs.org/" title="Node.js">Node.js</a> to build and test this
+				project.</p>
+				<a href="#build-and-test" id="build-and-test" style="color: inherit; text-decoration: none;">
+					<h3>Build and test</h3>
+				</a>
+				<p>Install dependencies.</p>
+				<pre><code>$ npm <span class="hljs-keyword">install</span>
+</code></pre>
+				<p>Use the <code>build</code> package script to compile, test, lint, and build the
+				documentation.</p>
+				<pre><code>$ npm <span class="hljs-keyword">run</span><span class="bash"> build</span>
+</code></pre>
+				<a href="#release" id="release" style="color: inherit; text-decoration: none;">
+					<h3>Release</h3>
+				</a>
+				<p>Releases are handled via the <a href="https://github.com/atomist/atomist-sdm" title="Atomist Software Delivery Machine">Atomist SDM</a>.  Just press
+				the &#39;Approve&#39; button in the Atomist dashboard or Slack.</p>
+				<hr>
+				<p>Created by <a href="https://atomist.com/" title="Atomist - How Teams Deliver Software">Atomist</a>.
+				Need Help?  <a href="https://join.atomist.com/" title="Atomist Community Slack">Join our Slack workspace</a>.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_index_.html">&quot;index&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_lib_bucket_.html">&quot;lib/bucket&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_lib_configure_.html">&quot;lib/configure&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
