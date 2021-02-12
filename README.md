@@ -4,7 +4,6 @@
 
 # @atomist/k8s-sdm
 
-[![atomist sdm goals](http://badge.atomist.com/T29E48P34/atomist/k8-automation/7f92c63a-cd89-448e-8360-e9c507f87099)](https://app.atomist.com/workspace/T29E48P34)
 [![npm version](https://img.shields.io/npm/v/@atomist/k8s-sdm.svg)](https://www.npmjs.com/package/@atomist/k8s-sdm)
 [![Docker Pulls](https://img.shields.io/docker/pulls/atomist/k8s-sdm.svg)](https://hub.docker.com/r/atomist/k8s-sdm/)
 
